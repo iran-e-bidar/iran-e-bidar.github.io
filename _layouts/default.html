@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="{{ site.lang }}">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% t site.title %}</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; }
+        nav { margin-bottom: 30px; }
+        nav a { margin-right: 20px; text-decoration: none; }
+        .lang-switcher { float: right; }
+        .lang-switcher a { margin-left: 10px; }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="{% tl home %}">{% t nav.home %}</a>
+            <a href="{% tl about %}">{% t nav.about %}</a>
+            <a href="{% tl contact %}">{% t nav.contact %}</a>
+            
+            <div class="lang-switcher">
+                {% for lang in site.languages %}
+                    {% if lang == site.lang %}
+                        <strong>{{ lang }}</strong>
+                    {% else %}
+                        <a href="{% tl {{ page.url }} {{ lang }} %}">{{ lang }}</a>
+                    {% endif %}
+                {% endfor %}
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        {{ content }}
+    </main>
+</body>
+</html>
