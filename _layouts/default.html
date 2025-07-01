@@ -1,32 +1,40 @@
 <!DOCTYPE html>
-<html lang="{{ site.lang }}">
+<html lang="{{ page.lang | default: 'en' }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% t site.title %}</title>
+    <title>Iran-e Bidar</title>
     <style>
         body { font-family: Arial, sans-serif; margin: 40px; }
         nav { margin-bottom: 30px; }
         nav a { margin-right: 20px; text-decoration: none; }
         .lang-switcher { float: right; }
         .lang-switcher a { margin-left: 10px; }
+        .current-lang { font-weight: bold; }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="{% tl home %}">{% t nav.home %}</a>
-            <a href="{% tl about %}">{% t nav.about %}</a>
-            <a href="{% tl contact %}">{% t nav.contact %}</a>
+            {% if page.lang == 'de' %}
+                <a href="/de/">Startseite</a>
+                <a href="/de/about/">Über uns</a>
+            {% else %}
+                <a href="/en/">Home</a>
+                <a href="/en/about/">About</a>
+            {% endif %}
             
             <div class="lang-switcher">
-                {% for lang in site.languages %}
-                    {% if lang == site.lang %}
-                        <strong>{{ lang }}</strong>
-                    {% else %}
-                        <a href="{% tl {{ page.url }} {{ lang }} %}">{{ lang }}</a>
-                    {% endif %}
-                {% endfor %}
+                {% if page.lang == 'en' %}
+                    <span class="current-lang">en</span>
+                {% else %}
+                    <a href="/en/">en</a>
+                {% endif %}
+                {% if page.lang == 'de' %}
+                    <span class="current-lang">de</span>
+                {% else %}
+                    <a href="/de/">de</a>
+                {% endif %}
             </div>
         </nav>
     </header>

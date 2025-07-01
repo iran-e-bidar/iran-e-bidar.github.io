@@ -1,7 +1,6 @@
 source "https://rubygems.org"
 
-gem "jekyll", "~> 4.0"
-gem "jekyll-multiple-languages-plugin"
+gem "jekyll", "~> 3.9"
 
 group :jekyll_plugins do
   gem "jekyll-feed"
