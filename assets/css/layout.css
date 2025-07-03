@@ -1,0 +1,98 @@
+/* ========================================
+   Layout System
+   ======================================== */
+
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-base);
+  color: var(--color-medium);
+  background-color: var(--bg-primary);
+  text-align: center;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: var(--space-xl);
+  max-width: var(--container-lg);
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Language Switcher */
+.lang-switcher {
+  text-align: right;
+  margin-bottom: var(--space-2xl);
+  padding: var(--space-xl) var(--space-2xl) 0;
+}
+
+.lang-switcher a {
+  margin-left: var(--space-sm);
+  color: var(--color-primary);
+  transition: color var(--transition-base);
+}
+
+.lang-switcher a:hover {
+  color: var(--color-primary-dark);
+}
+
+.current-lang {
+  font-weight: 600;
+  color: var(--color-dark);
+}
+
+/* Content Sections */
+.content-section {
+  max-width: var(--container-md);
+  margin: var(--space-2xl) auto;
+  padding: var(--space-xl);
+  text-align: left;
+}
+
+.content-section h2 {
+  font-size: var(--font-size-2xl);
+  color: var(--color-dark);
+  margin-bottom: var(--space-xl);
+}
+
+.content-section p {
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-medium);
+  margin-bottom: var(--space-xl);
+}
+
+.content-section ol,
+.content-section ul {
+  list-style: initial;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-relaxed);
+  color: var(--color-medium);
+  margin-left: var(--space-xl);
+  padding-left: var(--space-md);
+}
+
+.content-section li {
+  margin-bottom: var(--space-sm);
+}
+
+.content-section a {
+  color: var(--color-primary);
+  transition: color var(--transition-base);
+}
+
+.content-section a:hover {
+  color: var(--color-primary-dark);
+  text-decoration: underline;
+}
+
+.content-section a[href^="https://github.com"] {
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+  margin-left: var(--space-xs);
+}

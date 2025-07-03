@@ -1,0 +1,105 @@
+/* ========================================
+   RTL (Persian) Language Support
+   ======================================== */
+
+/* Base RTL Styles */
+html[lang="fa"] {
+  direction: rtl;
+}
+
+html[lang="fa"] body {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .container {
+  direction: rtl;
+}
+
+/* Language Switcher RTL */
+html[lang="fa"] .lang-switcher {
+  text-align: left;
+  padding: var(--space-xl) var(--space-2xl) 0;
+}
+
+html[lang="fa"] .lang-switcher a {
+  margin-right: var(--space-sm);
+  margin-left: 0;
+}
+
+/* Content Sections RTL */
+html[lang="fa"] .content-section {
+  text-align: right;
+  direction: rtl;
+}
+
+html[lang="fa"] .content-section ol,
+html[lang="fa"] .content-section ul {
+  margin-right: var(--space-xl);
+  margin-left: 0;
+  padding-right: var(--space-md);
+  padding-left: 0;
+}
+
+html[lang="fa"] .content-section a[href^="https://github.com"] {
+  margin-right: var(--space-xs);
+  margin-left: 0;
+}
+
+/* Process Flow RTL */
+html[lang="fa"] .process-flow-hero {
+  direction: rtl;
+}
+
+html[lang="fa"] .process-steps {
+  direction: rtl;
+}
+
+/* Action Cards RTL */
+html[lang="fa"] .action-grid {
+  direction: rtl;
+}
+
+html[lang="fa"] .action-card {
+  direction: rtl;
+  text-align: right;
+}
+
+html[lang="fa"] .explore-grid {
+  direction: rtl;
+}
+
+/* Stage Pages RTL */
+html[lang="fa"] .step-detail {
+  border-left: none;
+  border-right: 4px solid var(--color-primary);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+html[lang="fa"] .step-detail ul {
+  margin-right: var(--space-xl);
+  margin-left: 0;
+}
+
+html[lang="fa"] .stage-transition {
+  border-left: none;
+  border-right: 4px solid var(--color-secondary);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+html[lang="fa"] .release-benefits {
+  border-left: none;
+  border-right: 4px solid var(--color-accent);
+  border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+/* Quote RTL - Override for Persian quotes */
+html[lang="fa"] .quote {
+  direction: rtl;
+  text-align: center;
+}
+
+html[lang="fa"] .author {
+  direction: rtl;
+  text-align: center;
+}

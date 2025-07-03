@@ -1,0 +1,67 @@
+/* ========================================
+   Typography System
+   ======================================== */
+
+/* Main Title */
+.main-title {
+  font-size: var(--font-size-3xl);
+  font-weight: 700;
+  margin: var(--space-2xl) 0;
+  color: var(--color-dark);
+  line-height: var(--line-height-tight);
+}
+
+/* Quote Container */
+.quote-container {
+  max-width: var(--container-md);
+  margin: 0 auto var(--space-2xl);
+  padding: var(--space-xl);
+}
+
+.quote {
+  font-size: var(--font-size-lg);
+  font-style: italic;
+  color: var(--color-medium);
+  margin-bottom: var(--space-lg);
+  line-height: var(--line-height-base);
+  text-align: center;
+}
+
+.author {
+  font-size: var(--font-size-base);
+  color: var(--color-light);
+  font-weight: 400;
+  text-align: center;
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  color: var(--color-dark);
+  font-weight: 600;
+  line-height: var(--line-height-tight);
+  margin-bottom: var(--space-md);
+}
+
+h1 { font-size: var(--font-size-3xl); }
+h2 { font-size: var(--font-size-2xl); }
+h3 { font-size: var(--font-size-xl); }
+h4 { font-size: var(--font-size-lg); }
+h5 { font-size: var(--font-size-base); }
+h6 { font-size: var(--font-size-sm); }
+
+/* Utility Classes */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+.font-bold { font-weight: 700; }
+.font-semibold { font-weight: 600; }
+.font-medium { font-weight: 500; }
+.font-normal { font-weight: 400; }
+
+.text-primary { color: var(--color-primary); }
+.text-secondary { color: var(--color-secondary); }
+.text-accent { color: var(--color-accent); }
+.text-dark { color: var(--color-dark); }
+.text-medium { color: var(--color-medium); }
+.text-light { color: var(--color-light); }

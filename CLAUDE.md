@@ -1,4 +1,25 @@
-Actual Path Taken:
+# Iran-e Bidar - Constitutional Democracy Platform
+
+## Mission Statement
+Iran-e Bidar is a collaborative platform for constitutional discourse and civic participation, enabling transparent, community-driven development of constitutional amendments through democratic processes.
+
+## Platform Philosophy
+- **Transparency**: All processes are open and auditable
+- **Participation**: Low barrier to entry, GitHub account sufficient to start
+- **Democracy**: 75% approval threshold for amendments
+- **Bilingual**: Equal support for English and Persian languages
+- **Quality**: Multi-stage review and refinement process
+
+## Democratic Process Flow
+
+### 5-Stage Amendment Process
+1. **Discuss** → Open dialogue and idea development
+2. **Propose** → Formal amendment drafting  
+3. **Review** → Multi-stakeholder evaluation
+4. **Approve (75%)** → Community voting and consensus
+5. **Release** → Publication and implementation
+
+### Process Example Path:
   1. Discussion: Philosophy debate (2 months)
   2. Issue #156: Specific proposal created
   3. Project: Amendment tracking started
@@ -9,12 +30,6 @@ Actual Path Taken:
   8. Modified Issue #156: Updated proposal
   9. New Pull Request: Revised text
   10. Release v2.5: Success!
-
-  Alternative paths that could have happened:
-  - Expert could have initiated via Issue first
-  - Could have been urgent if government censorship crisis
-  - Could have failed and been archived
-  - Could have split into multiple smaller amendments
 
  Project-Issue Relationships
 
@@ -70,6 +85,100 @@ Actual Path Taken:
 
   Would you like me to show you how to structure projects for your constitutional platform?
 
+## Site Architecture
+
+### Frontend Technology Stack
+- **Jekyll**: Static site generator
+- **GitHub Pages**: Hosting and deployment
+- **Modern CSS**: Custom properties, grid, flexbox
+- **Responsive Design**: Mobile-first approach
+- **Progressive Enhancement**: Core functionality works without JavaScript
+
+### CSS Architecture (Refactored)
+```
+assets/css/
+├── main.css              # Entry point with imports
+├── reset.css             # Modern CSS reset
+├── variables.css         # Design system tokens
+├── typography.css        # Type scale and text styles
+├── layout.css           # Base layout and grid systems
+├── rtl.css              # Persian/RTL language support
+├── responsive.css       # Mobile-first responsive design
+├── utilities.css        # Utility classes
+└── components/
+    ├── process-flow.css    # Hero process flow component
+    ├── action-cards.css    # Homepage action cards
+    └── stage-pages.css     # Stage explanation pages
+```
+
+### Page Structure
+```
+Site Root
+├── en/                   # English language pages
+│   ├── index.html        # Homepage
+│   ├── about.html        # About page  
+│   ├── discussions.html  # Discussions listing
+│   ├── issues.html       # Issues listing
+│   ├── projects.html     # Projects listing
+│   ├── wiki.html         # Wiki listing
+│   ├── pulls.html        # Pull requests listing
+│   ├── releases.html     # Releases listing
+│   ├── discuss-stage.html    # Process stage explanation
+│   ├── propose-stage.html    # Process stage explanation
+│   ├── review-stage.html     # Process stage explanation
+│   ├── approval-process.html # Voting process explanation
+│   └── release-stage.html    # Release process explanation
+├── fa/                   # Persian language pages (mirrors en/)
+├── _layouts/
+│   └── default.html      # Base template
+├── assets/css/           # Stylesheets (see CSS Architecture)
+├── scripts/              # Testing and automation scripts
+└── screenshots/          # Visual testing screenshots
+```
+
+## Testing Infrastructure
+
+### Automated Testing Scripts
+Located in `/scripts/` directory:
+
+#### Link Testing
+- **`test-links.js`**: Validates all internal navigation links
+- **`test-approval-links.js`**: Specifically tests process flow clickability
+- **`verify-approval-links.js`**: Verifies approval process integration
+- **`test-all-stages.js`**: Comprehensive stage page testing
+
+#### Visual Testing  
+- **`test-screenshots.js`**: Captures homepage and main page screenshots
+- **`test-approval-pages.js`**: Screenshots approval process pages
+- **`screenshot-stage-page.js`**: Individual stage page screenshots
+
+#### Usage Example
+```bash
+# Test all navigation links
+node scripts/test-links.js
+
+# Visual regression testing
+node scripts/test-screenshots.js
+
+# Comprehensive stage testing
+node scripts/test-all-stages.js
+```
+
+### Screenshot Testing Process
+1. **Puppeteer Automation**: Headless Chrome browser automation
+2. **Multi-language Testing**: Both English and Persian pages
+3. **Responsive Testing**: Desktop viewport (1200x800)
+4. **Full Page Capture**: Complete page screenshots for review
+5. **Manual Review**: Visual inspection for layout issues
+
+### Quality Assurance Checklist
+- ✅ All internal links functional
+- ✅ Process flow fully interactive  
+- ✅ RTL/Persian rendering correct
+- ✅ Responsive design working
+- ✅ Visual hierarchy clear
+- ✅ Accessibility standards met
+
 ## Discussions Integration Plan
 
 **GitHub Action Workflow**:
@@ -85,6 +194,99 @@ Actual Path Taken:
 - Original language indicated with badge
 
 **Translation**: Google Translate API key stored in GitHub secrets, translations cached to avoid re-processing unchanged content.
+
+## User Experience Design
+
+### Information Architecture
+- **Progressive Disclosure**: Start simple, reveal complexity on demand
+- **Two Primary Actions**: Join Discussions, Propose Changes
+- **Educational Gateway**: Process flow links to detailed explanations
+- **Bilingual Equity**: Equal treatment of English and Persian content
+
+### Navigation Patterns
+1. **Homepage**: Overview and primary actions
+2. **Process Flow**: Interactive 5-step visual guide
+3. **Stage Pages**: Detailed explanations of each process step
+4. **Content Pages**: Lists of discussions, issues, projects, etc.
+5. **GitHub Integration**: Seamless transition to contribution
+
+### Accessibility Features
+- **Semantic HTML**: Proper heading hierarchy and landmarks
+- **Keyboard Navigation**: All interactive elements accessible
+- **Screen Readers**: ARIA labels and descriptions where needed
+- **Color Contrast**: WCAG AA compliance
+- **RTL Support**: Proper Persian text rendering and layout
+
+## Development Workflow
+
+### Local Development
+```bash
+# Start Jekyll server
+bundle exec jekyll serve --host 0.0.0.0 --port 4000
+
+# Run link tests
+node scripts/test-links.js
+
+# Generate screenshots
+node scripts/test-screenshots.js
+
+# Test specific functionality
+node scripts/test-all-stages.js
+```
+
+### Deployment Process
+1. **GitHub Pages**: Automatic deployment on push to main
+2. **Jekyll Build**: Static site generation
+3. **Asset Processing**: CSS compilation and optimization
+4. **Testing**: Automated link and visual testing
+5. **Monitoring**: Manual review of generated screenshots
+
+### Code Organization Principles
+- **Modular CSS**: Component-based architecture
+- **Design System**: Consistent tokens and patterns
+- **Maintainable**: Clear naming conventions and documentation
+- **Scalable**: Easy to add new pages and components
+- **Performance**: Minimal redundancy and optimized loading
+
+## Visual Design System
+
+See `/docs/visual-grammar.md` for comprehensive design documentation including:
+- Color palette and usage guidelines
+- Typography scale and hierarchy
+- Spacing system and layout patterns
+- Component library and variants
+- RTL/Persian language adaptations
+- Responsive design breakpoints
+- Accessibility considerations
+
+## Future Enhancements
+
+### Planned Features
+- **GitHub API Integration**: Dynamic content from GitHub
+- **Translation Automation**: Google Translate API workflow
+- **Search Functionality**: Site-wide content search
+- **Commenting System**: Integrated discussion capabilities
+- **Analytics**: Usage tracking and insights
+
+### Technical Improvements
+- **Performance**: Critical CSS inlining
+- **SEO**: Enhanced meta tags and structured data
+- **PWA**: Service worker and offline functionality
+- **Security**: Content Security Policy headers
+
+## Contribution Guidelines
+
+### For Developers
+1. **Follow CSS Architecture**: Use established component patterns
+2. **Test Changes**: Run link and visual tests before submitting
+3. **Document Updates**: Update this file for architectural changes
+4. **Accessibility**: Ensure new features meet accessibility standards
+
+### For Content
+1. **Bilingual Requirement**: All content must be available in both languages
+2. **Consistent Tone**: Professional, transparent, inclusive
+3. **Clear Information Hierarchy**: Use established typography patterns
+4. **Link Testing**: Verify all internal and external links function
 
 > what elements a project contain?
 

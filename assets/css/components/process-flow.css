@@ -1,0 +1,59 @@
+/* ========================================
+   Process Flow Component
+   ======================================== */
+
+.process-flow-hero {
+  background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-dark) 100%);
+  color: white;
+  padding: var(--space-2xl) var(--space-xl);
+  margin: var(--space-2xl) auto;
+  max-width: var(--container-lg);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+}
+
+.process-steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: var(--space-lg);
+  font-size: var(--font-size-base);
+  font-weight: 500;
+}
+
+.step {
+  background: rgba(255, 255, 255, 0.2);
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(10px);
+  transition: all var(--transition-base);
+  white-space: nowrap;
+}
+
+.step a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.step:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+.step.highlight {
+  background: rgba(255, 255, 255, 0.3);
+  font-weight: 600;
+  transform: scale(1.05);
+}
+
+.step.highlight:hover {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.arrow {
+  font-size: 1.2em;
+  font-weight: bold;
+  color: rgba(255, 255, 255, 0.8);
+}

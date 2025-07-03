@@ -1,0 +1,19 @@
+/* ========================================
+   Iran-e Bidar Design System
+   Modern CSS with Custom Properties
+   ======================================== */
+
+/* CSS Reset & Base */
+@import 'reset.css';
+@import 'variables.css';
+@import 'typography.css';
+@import 'layout.css';
+@import 'components.css';
+@import 'utilities.css';
+@import 'rtl.css';
+@import 'responsive.css';
+
+/* Component-specific imports */
+@import 'components/process-flow.css';
+@import 'components/action-cards.css';
+@import 'components/stage-pages.css';

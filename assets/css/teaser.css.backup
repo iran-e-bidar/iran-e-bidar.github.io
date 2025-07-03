@@ -1,0 +1,509 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+
+.lang-switcher { 
+    text-align: right; 
+    margin-bottom: 40px;
+    padding: 20px 30px 0 30px;
+}
+
+.lang-switcher a { 
+    margin-left: 10px; 
+}
+
+.current-lang { 
+    font-weight: bold; 
+}
+
+.main-title {
+    font-size: clamp(2rem, 8vw, 4rem);
+    font-weight: bold;
+    margin: 40px 0;
+    color: #2c3e50;
+}
+
+.quote-container {
+    max-width: 800px;
+    margin: 0 auto 40px auto;
+    padding: 20px;
+}
+
+.quote {
+    font-size: clamp(1.1rem, 3vw, 1.5rem);
+    font-style: italic;
+    color: #34495e;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    direction: rtl;
+    text-align: center;
+}
+
+.author {
+    font-size: clamp(0.9rem, 2.5vw, 1.2rem);
+    color: #7f8c8d;
+    font-weight: normal;
+    direction: rtl;
+}
+
+/* Process Flow Hero Section */
+.process-flow-hero {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    padding: 25px 20px;
+    margin: 40px auto;
+    max-width: 900px;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+.process-steps {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    font-weight: 500;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.step.highlight {
+    background: rgba(255, 255, 255, 0.3);
+    font-weight: 600;
+    transform: scale(1.05);
+}
+
+.step a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.step.highlight a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.step:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    cursor: pointer;
+}
+
+.step.highlight:hover {
+    background: rgba(255, 255, 255, 0.4);
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* RTL adjustments for process flow */
+html[lang="fa"] .process-flow-hero {
+    direction: rtl;
+}
+
+html[lang="fa"] .process-steps {
+    direction: rtl;
+}
+
+/* Mobile responsiveness for process flow */
+@media (max-width: 768px) {
+    .process-flow-hero {
+        margin: 30px 10px;
+        padding: 20px 15px;
+    }
+    
+    .process-steps {
+        gap: 10px;
+        font-size: 0.9rem;
+    }
+    
+    .step {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    
+    .arrow {
+        font-size: 1em;
+    }
+}
+
+/* Persian/RTL specific styles */
+html[lang="fa"] {
+    direction: rtl;
+}
+
+html[lang="fa"] body {
+    direction: rtl;
+    text-align: right;
+}
+
+html[lang="fa"] .container {
+    direction: rtl;
+}
+
+html[lang="fa"] .lang-switcher {
+    text-align: left;
+    padding: 20px 30px 0 30px;
+}
+
+html[lang="fa"] .lang-switcher a {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+/* Content sections */
+.content-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+html[lang="fa"] .content-section {
+    text-align: right;
+    direction: rtl;
+}
+
+.content-section h2 {
+    font-size: clamp(1.5rem, 4vw, 2rem);
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+.content-section p {
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    line-height: 1.8;
+    color: #34495e;
+    margin-bottom: 20px;
+}
+
+.content-section ol {
+    font-size: clamp(0.9rem, 2.5vw, 1.1rem);
+    line-height: 1.7;
+    color: #34495e;
+    margin-left: 20px;
+}
+
+html[lang="fa"] .content-section ol {
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.content-section li {
+    margin-bottom: 10px;
+}
+
+.content-section a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.content-section a:hover {
+    text-decoration: underline;
+}
+
+.content-section a[href^="https://github.com"] {
+    color: #e74c3c;
+    font-size: 0.9em;
+    margin-left: 5px;
+}
+
+html[lang="fa"] .content-section a[href^="https://github.com"] {
+    margin-right: 5px;
+    margin-left: 0;
+}
+
+/* Improved homepage UX styles */
+.primary-actions {
+    margin: 40px 0;
+}
+
+.action-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin: 30px 0;
+}
+
+.action-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 30px;
+    text-align: center;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.action-card.primary {
+    border-color: #3498db;
+    background: linear-gradient(135deg, #f8f9fa 0%, #ecf0f1 100%);
+}
+
+.action-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(52, 152, 219, 0.15);
+}
+
+.action-card h3 {
+    margin-bottom: 15px;
+}
+
+.action-card h3 a {
+    color: #2c3e50;
+    text-decoration: none;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+}
+
+.action-card p {
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #7f8c8d;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.contribute-link {
+    display: inline-block;
+    background: #3498db;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: background 0.3s ease;
+}
+
+.contribute-link:hover {
+    background: #2980b9;
+    text-decoration: none;
+}
+
+.secondary-actions {
+    margin: 40px 0;
+    padding: 30px;
+    background: #fdfdfd;
+    border-radius: 8px;
+    border: 1px solid #ecf0f1;
+}
+
+.secondary-actions h3 {
+    text-align: center;
+    color: #7f8c8d;
+    font-size: clamp(1rem, 2.5vw, 1.2rem);
+    margin-bottom: 20px;
+}
+
+.explore-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 15px;
+}
+
+.explore-item {
+    display: block;
+    padding: 15px;
+    background: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #34495e;
+    font-size: 0.9rem;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.explore-item:hover {
+    border-color: #3498db;
+    color: #3498db;
+    text-decoration: none;
+}
+
+.process-summary {
+    background: #e8f4f8;
+    padding: 20px;
+    border-radius: 8px;
+    margin: 30px 0;
+    text-align: center;
+}
+
+.process-summary p {
+    margin: 0;
+    font-size: clamp(0.9rem, 2.5vw, 1rem);
+    color: #2c3e50;
+}
+
+.cta {
+    text-align: center;
+    font-size: clamp(1rem, 2.5vw, 1.1rem);
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* RTL adjustments for new styles */
+html[lang="fa"] .action-grid {
+    direction: rtl;
+}
+
+html[lang="fa"] .action-card {
+    direction: rtl;
+    text-align: right;
+}
+
+html[lang="fa"] .explore-grid {
+    direction: rtl;
+}
+
+html[lang="fa"] .process-summary {
+    direction: rtl;
+    text-align: center;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .action-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .explore-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .action-card {
+        padding: 20px;
+    }
+}
+
+/* Approval Process Page Styles */
+.process-explanation {
+    margin: 40px 0;
+}
+
+.step-detail {
+    background: #f8f9fa;
+    border-left: 4px solid #3498db;
+    padding: 25px;
+    margin: 25px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+html[lang="fa"] .step-detail {
+    border-left: none;
+    border-right: 4px solid #3498db;
+    border-radius: 8px 0 0 8px;
+}
+
+.step-detail h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+    font-size: clamp(1.1rem, 3vw, 1.3rem);
+}
+
+.step-detail p {
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.step-detail ul {
+    margin-left: 20px;
+    line-height: 1.6;
+}
+
+html[lang="fa"] .step-detail ul {
+    margin-right: 20px;
+    margin-left: 0;
+}
+
+.step-detail li {
+    margin-bottom: 8px;
+}
+
+.getting-started {
+    background: linear-gradient(135deg, #e8f4f8 0%, #f0f8ff 100%);
+    padding: 30px;
+    border-radius: 12px;
+    margin: 40px 0;
+    text-align: center;
+}
+
+.getting-started h3 {
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.action-buttons .contribute-btn {
+    margin: 5px;
+}
+
+/* Stage Explanation Pages */
+.stage-transition {
+    background: #e8f5e8;
+    border-left: 4px solid #27ae60;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+html[lang="fa"] .stage-transition {
+    border-left: none;
+    border-right: 4px solid #27ae60;
+    border-radius: 8px 0 0 8px;
+}
+
+.stage-transition h3 {
+    color: #27ae60;
+    margin-bottom: 15px;
+}
+
+.release-benefits {
+    background: linear-gradient(135deg, #fff5e6 0%, #ffe6cc 100%);
+    border-left: 4px solid #f39c12;
+    padding: 25px;
+    margin: 30px 0;
+    border-radius: 0 8px 8px 0;
+}
+
+html[lang="fa"] .release-benefits {
+    border-left: none;
+    border-right: 4px solid #f39c12;
+    border-radius: 8px 0 0 8px;
+}
+
+.release-benefits h3 {
+    color: #f39c12;
+    margin-bottom: 15px;
+}

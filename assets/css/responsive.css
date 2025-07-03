@@ -1,0 +1,104 @@
+/* ========================================
+   Responsive Design
+   ======================================== */
+
+/* Mobile First Approach */
+
+/* Small devices (landscape phones, 576px and up) */
+@media (max-width: 575.98px) {
+  .container {
+    padding: var(--space-md);
+  }
+  
+  .lang-switcher {
+    padding: var(--space-md) var(--space-lg) 0;
+  }
+  
+  .content-section {
+    padding: var(--space-md);
+  }
+  
+  .action-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-lg);
+  }
+  
+  .action-card {
+    padding: var(--space-xl);
+  }
+  
+  .explore-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Process Flow Responsive */
+@media (max-width: 767.98px) {
+  .process-flow-hero {
+    margin: var(--space-2xl) var(--space-sm);
+    padding: var(--space-xl) var(--space-lg);
+  }
+  
+  .process-steps {
+    gap: var(--space-sm);
+    font-size: var(--font-size-sm);
+  }
+  
+  .step {
+    padding: var(--space-xs) var(--space-md);
+    font-size: var(--font-size-xs);
+  }
+  
+  .arrow {
+    font-size: 1em;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .action-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .explore-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .container {
+    padding: var(--space-3xl);
+  }
+  
+  .content-section {
+    padding: var(--space-2xl);
+  }
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .process-flow-hero {
+    max-width: var(--container-xl);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .lang-switcher,
+  .contribute-btn,
+  .action-buttons {
+    display: none;
+  }
+  
+  .process-flow-hero {
+    background: none;
+    color: black;
+    border: 1px solid #ccc;
+  }
+  
+  .step {
+    background: none;
+    border: 1px solid #ccc;
+  }
+}
