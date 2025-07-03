@@ -4,43 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iran-e Bidar</title>
-    <style>
-        body { font-family: Arial, sans-serif; margin: 40px; }
-        nav { margin-bottom: 30px; }
-        nav a { margin-right: 20px; text-decoration: none; }
-        .lang-switcher { float: right; }
-        .lang-switcher a { margin-left: 10px; }
-        .current-lang { font-weight: bold; }
-    </style>
+    <link rel="stylesheet" href="/assets/css/teaser.css">
 </head>
 <body>
-    <header>
-        <nav>
-            {% if page.lang == 'de' %}
-                <a href="/de/">Startseite</a>
-                <a href="/de/about/">Über uns</a>
-            {% else %}
-                <a href="/en/">Home</a>
-                <a href="/en/about/">About</a>
-            {% endif %}
-            
-            <div class="lang-switcher">
-                {% if page.lang == 'en' %}
-                    <span class="current-lang">en</span>
-                {% else %}
-                    <a href="/en/">en</a>
-                {% endif %}
-                {% if page.lang == 'de' %}
-                    <span class="current-lang">de</span>
-                {% else %}
-                    <a href="/de/">de</a>
-                {% endif %}
-            </div>
-        </nav>
-    </header>
+    <div class="lang-switcher">
+        {% if page.lang == 'en' %}
+            <span class="current-lang">en</span>
+        {% else %}
+            <a href="/en/">en</a>
+        {% endif %}
+        {% if page.lang == 'fa' %}
+            <span class="current-lang">fa</span>
+        {% else %}
+            <a href="/fa/">fa</a>
+        {% endif %}
+    </div>
     
-    <main>
+    <div class="container">
         {{ content }}
-    </main>
+    </div>
 </body>
 </html>
