@@ -14,11 +14,40 @@ html[lang="fa"] {
 html[lang="fa"] body {
   direction: rtl;
   text-align: right;
-  font-family: var(--font-family-persian);
+  font-family: var(--font-family-persian) !important;
 }
 
 html[lang="fa"] .container {
   direction: rtl;
+}
+
+/* Ensure all text elements use Persian font */
+html[lang="fa"] *,
+html[lang="fa"] h1,
+html[lang="fa"] h2,
+html[lang="fa"] h3,
+html[lang="fa"] h4,
+html[lang="fa"] h5,
+html[lang="fa"] h6,
+html[lang="fa"] p,
+html[lang="fa"] .main-title,
+html[lang="fa"] .quote,
+html[lang="fa"] .author,
+html[lang="fa"] .action-card,
+html[lang="fa"] .step-detail,
+html[lang="fa"] .stage-transition,
+html[lang="fa"] .release-benefits,
+html[lang="fa"] .process-steps,
+html[lang="fa"] .process-flow-hero,
+html[lang="fa"] .content-section,
+html[lang="fa"] .lang-switcher,
+html[lang="fa"] ul,
+html[lang="fa"] ol,
+html[lang="fa"] li,
+html[lang="fa"] a,
+html[lang="fa"] span,
+html[lang="fa"] div {
+  font-family: var(--font-family-persian) !important;
 }
 
 /* Language Switcher RTL */
