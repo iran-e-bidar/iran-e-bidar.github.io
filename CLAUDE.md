@@ -172,12 +172,12 @@ node scripts/test-all-stages.js
 5. **Manual Review**: Visual inspection for layout issues
 
 ### Quality Assurance Checklist
-- ✅ All internal links functional
-- ✅ Process flow fully interactive  
-- ✅ RTL/Persian rendering correct
-- ✅ Responsive design working
-- ✅ Visual hierarchy clear
-- ✅ Accessibility standards met
+- All internal links functional
+- Process flow fully interactive  
+- RTL/Persian rendering correct
+- Responsive design working
+- Visual hierarchy clear
+- Accessibility standards met
 
 ## Discussions Integration Plan
 
@@ -305,18 +305,18 @@ See `/docs/visual-grammar.md` for comprehensive design documentation including:
 
   Different perspectives on the same data
 
-  📋 Table View:
+  Table View:
   | Title | Status | Priority | Assignee | Due Date |
   |-------|--------|----------|----------|----------|
   | Issue #156 | In Progress | High | @legal_expert | Mar 15 |
 
-  📊 Board View (Kanban):
+  Board View (Kanban):
   [Backlog] → [In Review] → [Community Vote] → [Done]
 
-  📈 Roadmap View:
+  Roadmap View:
   Timeline showing when amendments will be completed
 
-  📋 List View:
+  List View:
   Simple list with filtering options
 
   ---
@@ -408,10 +408,10 @@ See `/docs/visual-grammar.md` for comprehensive design documentation including:
   Project: "Economic Justice Amendment Package"
 
   Views:
-  ├── 📋 Overview (Table): All items with status
-  ├── 📊 By Article (Board): Grouped by constitutional article
-  ├── 📈 Timeline (Roadmap): When each amendment goes live
-  └── 🎯 Priority (List): Filtered by community urgency
+  ├── Overview (Table): All items with status
+  ├── By Article (Board): Grouped by constitutional article
+  ├── Timeline (Roadmap): When each amendment goes live
+  └── Priority (List): Filtered by community urgency
 
   Items:
   ├── Issue #201: "Article 43 - Right to work needs update"
