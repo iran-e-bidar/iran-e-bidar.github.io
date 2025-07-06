@@ -2,14 +2,19 @@
    RTL (Persian) Language Support
    ======================================== */
 
+/* Import Vazirmatn font */
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700&display=swap');
+
 /* Base RTL Styles */
 html[lang="fa"] {
   direction: rtl;
+  font-family: var(--font-family-persian);
 }
 
 html[lang="fa"] body {
   direction: rtl;
   text-align: right;
+  font-family: var(--font-family-persian);
 }
 
 html[lang="fa"] .container {
