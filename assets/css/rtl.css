@@ -11,16 +11,10 @@ html[lang="fa"] {
 html[lang="fa"] body {
   direction: rtl;
   text-align: right;
-  font-family: var(--font-family-persian) !important;
 }
 
 html[lang="fa"] .container {
   direction: rtl;
-}
-
-/* Ensure all text elements use Persian font */
-html[lang="fa"] * {
-  font-family: 'Vazirmatn', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
 }
 
 /* Language Switcher RTL */
@@ -53,34 +47,37 @@ html[lang="fa"] .content-section a[href^="https://github.com"] {
   margin-left: 0;
 }
 
-/* Process Flow RTL */
-html[lang="fa"] .process-flow-hero {
-  direction: rtl;
-}
-
-html[lang="fa"] .process-steps {
-  direction: rtl;
-}
-
-/* Action Cards RTL */
-html[lang="fa"] .action-grid {
-  direction: rtl;
-}
-
-html[lang="fa"] .action-card {
-  direction: rtl;
-  text-align: right;
-}
-
+/* Process Flow & Action Cards RTL */
+html[lang="fa"] .process-flow-hero,
+html[lang="fa"] .process-steps,
+html[lang="fa"] .action-grid,
+html[lang="fa"] .action-card,
 html[lang="fa"] .explore-grid {
   direction: rtl;
 }
 
+html[lang="fa"] .action-card {
+  text-align: right;
+}
+
 /* Stage Pages RTL */
-html[lang="fa"] .step-detail {
+html[lang="fa"] .step-detail,
+html[lang="fa"] .stage-transition,
+html[lang="fa"] .release-benefits {
   border-left: none;
-  border-right: 4px solid var(--color-primary);
   border-radius: var(--radius-md) 0 0 var(--radius-md);
+}
+
+html[lang="fa"] .step-detail {
+  border-right: 4px solid var(--color-primary);
+}
+
+html[lang="fa"] .stage-transition {
+  border-right: 4px solid var(--color-secondary);
+}
+
+html[lang="fa"] .release-benefits {
+  border-right: 4px solid var(--color-accent);
 }
 
 html[lang="fa"] .step-detail ul {
@@ -88,24 +85,8 @@ html[lang="fa"] .step-detail ul {
   margin-left: 0;
 }
 
-html[lang="fa"] .stage-transition {
-  border-left: none;
-  border-right: 4px solid var(--color-secondary);
-  border-radius: var(--radius-md) 0 0 var(--radius-md);
-}
-
-html[lang="fa"] .release-benefits {
-  border-left: none;
-  border-right: 4px solid var(--color-accent);
-  border-radius: var(--radius-md) 0 0 var(--radius-md);
-}
-
-/* Quote RTL - Override for Persian quotes */
-html[lang="fa"] .quote {
-  direction: rtl;
-  text-align: center;
-}
-
+/* Quote RTL */
+html[lang="fa"] .quote,
 html[lang="fa"] .author {
   direction: rtl;
   text-align: center;
