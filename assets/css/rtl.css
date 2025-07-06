@@ -5,12 +5,12 @@
 /* Base RTL Styles */
 html[lang="fa"] {
   direction: rtl;
-  font-family: var(--font-family-persian);
 }
 
 html[lang="fa"] body {
   direction: rtl;
   text-align: right;
+  font-family: var(--font-family) !important;
 }
 
 html[lang="fa"] .container {

@@ -27,8 +27,7 @@
   --bg-accent: #e8f4f8;
   
   /* Typography */
-  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-  --font-family-persian: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
   --font-size-xs: clamp(0.875rem, 2vw, 1rem);
   --font-size-sm: clamp(1rem, 2.5vw, 1.125rem);
   --font-size-base: clamp(1.125rem, 2.5vw, 1.25rem);
