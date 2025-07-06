@@ -17,3 +17,24 @@
 @import 'components/process-flow.css';
 @import 'components/action-cards.css';
 @import 'components/stage-pages.css';
+
+/* Persian Font Override - Critical CSS */
+html[lang="fa"] *,
+html[lang="fa"] h1,
+html[lang="fa"] h2,
+html[lang="fa"] h3,
+html[lang="fa"] h4,
+html[lang="fa"] h5,
+html[lang="fa"] h6,
+html[lang="fa"] p,
+html[lang="fa"] .main-title,
+html[lang="fa"] .quote,
+html[lang="fa"] .author,
+html[lang="fa"] .cta {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* Match CTA font appearance exactly */
+html[lang="fa"] .main-title {
+    font-weight: 500 !important;
+}
