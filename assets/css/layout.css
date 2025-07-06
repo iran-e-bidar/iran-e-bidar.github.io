@@ -26,9 +26,12 @@ body {
 
 /* Language Switcher */
 .lang-switcher {
-  text-align: right;
-  margin-bottom: var(--space-2xl);
+  position: absolute;
+  top: 0;
+  right: 0;
   padding: var(--space-xl) var(--space-2xl) 0;
+  font-size: var(--font-size-sm);
+  z-index: 1000;
   display: flex;
   justify-content: flex-end;
   gap: var(--space-sm);
