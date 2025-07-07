@@ -1,7 +1,7 @@
 title: Iran-e Bidar
-description: A multilingual Jekyll site
+description: Constitutional Democracy Platform - Collaborative platform for constitutional discourse and civic participation
 baseurl: ""
-url: "http://localhost:4000"
+url: "https://iran-e-bidar.github.io"
 
 # Build settings
 markdown: kramdown
